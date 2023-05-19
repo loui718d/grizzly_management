@@ -1,0 +1,68 @@
+---
+import "../styles/global.css";
+---
+
+<footer>
+  <div class="footer_grid">
+    <div>
+      <h3>Grizzly Management APS</h3><p>Nyvej 16B, st</p>
+      <p>1851 Frederiksberg C</p><br />
+      <p>CVR - 43240129</p>
+    </div>
+    <div>
+      <a class="a" href="">Kontakt</a><br /><p>ryan@grizzlymanagement.dk</p><div
+      >
+        <img src="" alt="" /><img src="" alt="" />
+      </div>
+    </div>
+    <div class="flex_column" id="flex1">
+      <a class="a" href="">Forside</a><a class="a" href="">Artister</a><a
+        class="a"
+        href="">Om os</a
+      >
+    </div>
+    <div class="flex_column">
+      <a class="a" href="">Nyt</a><a class="a" href="">Send demo</a>
+    </div>
+    <div><img src="/img/ikoner/logo.svg" alt="" /></div>
+  </div>
+</footer>
+
+<style>
+  .flex_column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer_grid div:nth-child(n) {
+    margin-bottom: 20px;
+  }
+
+  #flex1 {
+    margin-bottom: 10px;
+  }
+
+  h3,
+  #kontakt {
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-link);
+    color: var(--color-hvid);
+    line-height: 22px;
+    letter-spacing: 11.5%;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  @media (min-width: 600px) {
+    .footer_grid {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+</style>

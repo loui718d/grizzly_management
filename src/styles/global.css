@@ -52,6 +52,7 @@
 
 body {
   background-color: var(--color-sort);
+  margin-left: 30px;
 }
 
 /*  mobil font styling */
@@ -97,7 +98,7 @@ a {
   text-transform: uppercase;
 }
 
-.link {
+.a {
   font-family: var(--font-family-helvetica);
   font-size: var(--font-size-link);
   color: var(--color-hvid);
@@ -105,6 +106,10 @@ a {
   letter-spacing: 11.5%;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
+  text-decoration: none;
+}
+.a:hover {
+  color: var(--color-blodappelsin);
 }
 
 /* Desktop font styling */
