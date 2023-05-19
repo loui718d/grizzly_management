@@ -1,0 +1,143 @@
+:root {
+  --font-weight-light: 300;
+  --font-weight-bold: 600;
+  --color-sort: #000000;
+  --color-hvid: #ffffff;
+  --color-blodappelsin: #eb440f;
+  --color-lime: #d3fe8a;
+  --color-oliven: #4f4718;
+  --color-sort-20: #cccccc;
+  --color-sort-40: #999999;
+  --color-sort-60: #666666;
+  --color-sort-80: #333333;
+  --color-lime-60: #edffd0;
+  --color-lime-80: #dcfea1;
+  --color-lime-120: #a9cb6e;
+  --color-lime-140: #546637;
+  --color-oliven-60: #959174;
+  --color-oliven-80: #726c46;
+  --color-oliven-120: #3f3913;
+  --color-oliven-140: #2f2b0e;
+  --color-blodappelsin-60: #f38f6f;
+  --color-blodappelsin-80: #ef693f;
+  --color-blodappelsin-120: #bc360c;
+  --color-blodappelsin-140: #8d2909;
+  --radius-knapper: 8px;
+  --radius-card-1: 200px 0px 0px 200px;
+  --radius-card-2: 0px 200px 200px 0px;
+  --media-query-max-width-mobile: 329px;
+  --media-query-max-width-desktop: 1169px;
+  --font-family-leage: "League Gothic", sans-serif;
+  --font-family-helvetica: Helvetica, sans-serif;
+  --font-size-h1-mobil: 84px;
+  --font-size-h2-mobil: 95px;
+  --font-size-h3-mobil: 16px;
+  --font-size-body-mobil: 16px;
+  --font-size-button-mobil: 14px;
+  --font-size-h1-desktop: 200px;
+  --font-size-h2-desktop: 180px;
+  --font-size-h3-desktop: 28px;
+  --font-size-body-desktop: 18px;
+  --font-size-button-desktop: 18px;
+  --font-size-link: 18px;
+}
+
+/* Generelle regler */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-sort);
+}
+
+/*  mobil font styling */
+h1 {
+  font-family: var(--font-family-leage);
+  font-size: var(--font-size-h1-mobil);
+  color: var(--color-blodappelsin);
+  line-height: 80.8px;
+  letter-spacing: 11.5%;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: var(--font-family-leage);
+  font-size: var(--font-size-h2-mobil);
+  color: var(--color-hvid);
+  line-height: 95px;
+  letter-spacing: 8%;
+}
+h3 {
+  font-family: var(--font-family-helvetica);
+  font-size: var(--font-size-h3-mobil);
+  color: var(--color-hvid);
+  line-height: 21.8px;
+  letter-spacing: 12%;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+p {
+  font-family: var(--font-family-helvetica);
+  font-size: var(--font-size-body-mobil);
+  color: var(--color-hvid);
+  line-height: 19.3px;
+  font-weight: var(--font-weight-light);
+}
+
+a {
+  font-family: var(--font-family-helvetica);
+  font-size: var(--font-size-button-mobil);
+  color: var(--color-hvid);
+  line-height: 17.1px;
+  letter-spacing: 12%;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+/* Desktop font styling */
+@media (min-width: 600px) {
+  h1 {
+    font-family: var(--font-family-leage);
+    font-size: var(--font-size-h1-desktop);
+    color: var(--color-blodappelsin);
+    line-height: 240px;
+    letter-spacing: 8%;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-family: var(--font-family-leage);
+    font-size: var(--font-size-h2-desktop);
+    color: var(--color-hvid);
+    line-height: 156px;
+    letter-spacing: 11%;
+  }
+  h3 {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-h3-desktop);
+    color: var(--color-hvid);
+    line-height: 34.2px;
+    letter-spacing: 12%;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+  }
+  p {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-body-desktop);
+    color: var(--color-hvid);
+    line-height: 21.8px;
+    font-weight: var(--font-weight-light);
+  }
+
+  a {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-button-desktop);
+    color: var(--color-hvid);
+    line-height: 22px;
+    letter-spacing: 12%;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+  }
+}
