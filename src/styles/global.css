@@ -97,6 +97,16 @@ a {
   text-transform: uppercase;
 }
 
+.link {
+  font-family: var(--font-family-helvetica);
+  font-size: var(--font-size-link);
+  color: var(--color-hvid);
+  line-height: 22px;
+  letter-spacing: 11.5%;
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
 /* Desktop font styling */
 @media (min-width: 600px) {
   h1 {
