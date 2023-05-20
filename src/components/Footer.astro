@@ -9,26 +9,34 @@ import "../styles/global.css";
       <p>1851 Frederiksberg C</p><br />
       <p>CVR - 43240129</p>
     </div>
-    <div>
-      <a class="a" href="">Kontakt</a><br /><p>ryan@grizzlymanagement.dk</p><div
-      >
-        <img src="" alt="" /><img src="" alt="" />
+    <div class="kontakt">
+      <a class="a" href="/kontakt.html">Kontakt</a>
+      <p>ryan@grizzlymanagement.dk</p><div>
+        <img src="/img/ikoner/ig.svg" alt="instagram" /><img
+          src="/img/ikoner/fb.svg"
+          alt="facebook"
+        />
       </div>
     </div>
     <div class="flex_column" id="flex1">
-      <a class="a" href="">Forside</a><a class="a" href="">Artister</a><a
+      <a class="a" href="/forside.html">Forside</a><a
         class="a"
-        href="">Om os</a
-      >
+        href="/artister.html">Artister</a
+      ><a class="a" href="/om_os.html">Om os</a>
     </div>
     <div class="flex_column">
-      <a class="a" href="">Nyt</a><a class="a" href="">Send demo</a>
+      <a class="a" href="/nyt.html">Nyt</a><a class="a" href="/send_demo.html"
+        >Send demo</a
+      >
     </div>
-    <div><img src="/img/ikoner/logo.svg" alt="" /></div>
+    <div><img src="/img/ikoner/logo_footer.svg" alt="" /></div>
   </div>
 </footer>
 
 <style>
+  footer {
+    margin-top: 60px;
+  }
   .flex_column {
     display: flex;
     flex-direction: column;
@@ -36,16 +44,15 @@ import "../styles/global.css";
   }
 
   .footer_grid div:nth-child(n) {
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 
   #flex1 {
     margin-bottom: 10px;
   }
 
-  h3,
-  #kontakt {
-    margin-bottom: 20px;
+  h3 {
+    padding-bottom: 20px;
   }
   h3 {
     font-family: var(--font-family-helvetica);
@@ -57,12 +64,25 @@ import "../styles/global.css";
     text-transform: uppercase;
     text-decoration: none;
   }
+  .kontakt p {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
 
-  @media (min-width: 600px) {
+  .kontakt img {
+    margin-right: 10px;
+    height: 29px;
+  }
+
+  @media (min-width: 800px) {
     .footer_grid {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
       justify-content: space-around;
+    }
+    .footer_grid div:nth-child(n) {
+      margin-right: 50px;
     }
   }
 </style>

@@ -53,6 +53,7 @@
 body {
   background-color: var(--color-sort);
   margin-left: 30px;
+  margin-right: 30px;
 }
 
 /*  mobil font styling */
@@ -61,7 +62,7 @@ h1 {
   font-size: var(--font-size-h1-mobil);
   color: var(--color-blodappelsin);
   line-height: 80.8px;
-  letter-spacing: 11.5%;
+  letter-spacing: 10px;
   text-transform: uppercase;
 }
 h2 {
@@ -69,14 +70,14 @@ h2 {
   font-size: var(--font-size-h2-mobil);
   color: var(--color-hvid);
   line-height: 95px;
-  letter-spacing: 8%;
+  letter-spacing: 8px;
 }
 h3 {
   font-family: var(--font-family-helvetica);
   font-size: var(--font-size-h3-mobil);
   color: var(--color-hvid);
   line-height: 21.8px;
-  letter-spacing: 12%;
+  letter-spacing: 2px;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 }
@@ -93,7 +94,7 @@ a {
   font-size: var(--font-size-button-mobil);
   color: var(--color-hvid);
   line-height: 17.1px;
-  letter-spacing: 12%;
+  letter-spacing: 2px;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 }
@@ -103,13 +104,30 @@ a {
   font-size: var(--font-size-link);
   color: var(--color-hvid);
   line-height: 22px;
-  letter-spacing: 11.5%;
+  letter-spacing: 2px;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   text-decoration: none;
 }
 .a:hover {
   color: var(--color-blodappelsin);
+}
+
+/* Knapper */
+
+.primary_small {
+  width: 185px;
+  height: 45px;
+  padding: 14px 72px;
+  border: 3px solid var(--color-blodappelsin);
+  color: var(--color-blodappelsin);
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: var(--color-sort);
+}
+.primary_small:hover {
+  background-color: var(--color-blodappelsin);
+  color: var(--color-sort);
 }
 
 /* Desktop font styling */
@@ -119,7 +137,7 @@ a {
     font-size: var(--font-size-h1-desktop);
     color: var(--color-blodappelsin);
     line-height: 240px;
-    letter-spacing: 8%;
+    letter-spacing: 16px;
     text-transform: uppercase;
   }
   h2 {
@@ -127,14 +145,14 @@ a {
     font-size: var(--font-size-h2-desktop);
     color: var(--color-hvid);
     line-height: 156px;
-    letter-spacing: 11%;
+    letter-spacing: 20px;
   }
   h3 {
     font-family: var(--font-family-helvetica);
     font-size: var(--font-size-h3-desktop);
     color: var(--color-hvid);
     line-height: 34.2px;
-    letter-spacing: 12%;
+    letter-spacing: 3.5px;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
   }
@@ -151,7 +169,7 @@ a {
     font-size: var(--font-size-button-desktop);
     color: var(--color-hvid);
     line-height: 22px;
-    letter-spacing: 12%;
+    letter-spacing: 2px;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
   }

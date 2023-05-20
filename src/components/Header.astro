@@ -1,0 +1,193 @@
+---
+import "../styles/global.css";
+---
+
+<header>
+  <div class="grid">
+    <div class="logo">
+      <img class="default" src="/img/ikoner/logo.svg" alt="logo" /><img
+        class="hover"
+        src="/img/ikoner/logo_hover.svg"
+        alt=""
+      />
+    </div>
+    <div class="mobil">
+      <div class="open"><img src="/img/ikoner/menu.svg" alt="open" /></div>
+      <div class="close"><img src="/img/ikoner/x.svg" alt="close" /></div>
+      <div id="sidepanel">
+        <ul>
+          <li><a class="a" href="">Artister</a></li>
+          <li><a class="a" href="">Om os</a></li>
+          <li><a class="a" href="">Nyt</a></li>
+          <li><a class="a" href="">Send demo</a></li>
+          <li><a class="a" href="">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="desktop">
+      <nav>
+        <ul>
+          <li><a class="a" href="">Artister</a></li>
+          <li><a class="a" href="">Om os</a></li>
+          <li><a class="a" href="">Nyt</a></li>
+          <li><a class="a" href="">Send demo</a></li>
+          <li><a class="a" href="">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  header {
+    padding-top: 10px;
+    margin-left: -20px;
+  }
+
+  .logo img {
+    height: 46px;
+  }
+  .logo .hover {
+    display: none; /* Start med at skjule hover-billedet */
+  }
+
+  .logo:hover .default {
+    display: none; /* Skjul standardbilledet, når der er hover */
+  }
+
+  .logo:hover .hover {
+    display: inline-block; /* Vis hover-billedet, når der er hover */
+  }
+
+  .desktop {
+    display: none;
+  }
+  /* Stil for sidepanelet */
+  #sidepanel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-blodappelsin);
+    transition: transform 0.3s;
+    transform: translateX(100%);
+  }
+  #sidepanel ul {
+    padding-top: 100px;
+    padding-left: 60px;
+    list-style: none;
+  }
+  #sidepanel ul li {
+    margin-bottom: 20px;
+  }
+
+  /* Stil for header-container */
+  header > div {
+    display: flex; /* Brug flexbox-layout */
+    align-items: center; /* Centrer elementer lodret */
+  }
+
+  /* Stil for åben knap */
+  .open,
+  .close {
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px; /* Tilføjet margen til højre for at adskille knapperne */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Stil for luk knap */
+  .close {
+    cursor: pointer;
+  }
+
+  /* Skjul luk knap i starten */
+  .close {
+    display: none;
+    z-index: 999;
+  }
+  .open img,
+  .close img {
+    width: 25px;
+  }
+
+  /* Stil for hovedindholdet */
+  .main-content {
+    margin-left: 0; /* Når sidepanelet er åbent, justerer vi hovedindholdet til at give plads til sidepanelet */
+    transition: margin-left 0.3s;
+  }
+  .a {
+    color: black;
+  }
+  .a:hover {
+    color: black;
+    text-decoration: underline;
+  }
+
+  @media (min-width: 800px) {
+    .desktop {
+      display: block;
+    }
+    .mobil {
+      display: none;
+    }
+
+    .a {
+      color: var(--color-hvid);
+    }
+    .a:hover {
+      color: var(--color-blodappelsin);
+      text-decoration: none;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: space-between;
+    }
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      gap: 30px;
+    }
+    .logo img {
+      height: 65px;
+    }
+  }
+</style>
+
+<script>
+  // Hent referencer til elementerne
+  const openButton = document.querySelector(".open");
+  const closeButton = document.querySelector(".close");
+  const sidePanel = document.getElementById("sidepanel");
+  const mainContent = document.querySelector(".main-content");
+
+  // Funktion til at åbne sidepanelet
+  function openSidePanel() {
+    sidePanel.style.transform = "translateX(0)"; // Flyt sidepanelet ind i visningen
+    closeButton.style.display = "block"; // Vis luk knap
+    openButton.style.display = "none"; // Skjul åben knap
+    mainContent.style.marginLeft = "250px"; // Juster hovedindholdet til at give plads til sidepanelet
+
+    // Tilføj overflow: hidden til body for at forhindre scrolling på hovedindholdet, når sidepanelet er åbent
+    document.body.style.overflow = "hidden";
+  }
+
+  // Funktion til at lukke sidepanelet
+  function closeSidePanel() {
+    sidePanel.style.transform = "translateX(100%)"; // Flyt sidepanelet uden for visningen
+    closeButton.style.display = "none"; // Skjul luk knap
+    openButton.style.display = "block"; // Vis åben knap
+    mainContent.style.marginLeft = "0"; // Juster hovedindholdet tilbage til normalt
+  }
+
+  // Lyt efter klik på åben knap
+  openButton.addEventListener("click", openSidePanel);
+
+  // Lyt efter klik på luk knap
+  closeButton.addEventListener("click", closeSidePanel);
+</script>
