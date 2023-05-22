@@ -56,6 +56,12 @@ body {
   margin-right: 30px;
 }
 
+img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
 /*  mobil font styling */
 h1 {
   font-family: var(--font-family-leage);

@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
@@ -16,17 +18,64 @@ import "../styles/global.css";
     />
   </head>
   <body>
-    <header></header>
-    <section><div><h1></h1><p></p><img src="" alt="" /></div></section>
+    <Header />
     <section>
-      <div><h2></h2></div>
-      <div><img src="" alt="" /></div>
-      <div><h3></h3><p></p></div>
+      <div>
+        <h1>Om Grizzly</h1><p>
+          Vores erfarne team, bestående af Ryan Bjørn Hansen og Rasmus Moosdorf,
+          har over 15 års erfaring i musikbranchen og ved, hvad der skal til for
+          at få artister ud i rampelyset og slå igennem.
+        </p>
+        <br />
+        <p>
+          Vi tror på mennesker med talent og at drømme skal udleves. Med den
+          helt rette støtte og dialog, kan der leveres store resultater. Hos
+          Grizzly Management finder du en tryg og professionel partner, der
+          hjælper artister med at finde deres vej i musikbranchen.
+        </p><img src="/img/billeder/om1.webp" alt="" />
+      </div>
     </section>
     <section>
-      <div><img src="" alt="" /></div>
-      <div><h3></h3><p></p></div>
+      <div><h2>Teamet</h2></div>
+      <div><img src="/img/billeder/om1.webp" alt="" /></div>
+      <div>
+        <h3>Ryan Bjørn hansen Manager</h3>
+        <h3>Manager</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          molestie nunc vel pharetra efficitur. Praesent arcu arcu, vestibulum
+          in dapibus eu, scelerisque id justo. Ut placerat nunc eu lorem
+          scelerisque tempus. Morbi sed ultricies mauris. Aliquam erat volutpat.
+          Quisque aliquam, tellus eu facilisis congue, tortor nunc convallis ex,
+          non placerat massa nunc in orci.
+        </p>
+      </div>
     </section>
-    <footer></footer>
+    <section>
+      <div><img src="/img/billeder/om1.webp" alt="" /></div>
+      <div>
+        <h3>Rasmus Moosdorf</h3>
+        <h3>Manager</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+          molestie nunc vel pharetra efficitur. Praesent arcu arcu, vestibulum
+          in dapibus eu, scelerisque id justo. Ut placerat nunc eu lorem
+          scelerisque tempus. Morbi sed ultricies mauris. Aliquam erat volutpat.
+          Quisque aliquam, tellus eu facilisis congue, tortor nunc convallis ex,
+          non placerat massa nunc in orci.
+        </p>
+      </div>
+    </section>
+    <Footer />
   </body>
 </html>
+
+<style>
+  h2 {
+    color: var(--color-lime);
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+    margin-top: 100px;
+    margin-right: 300px;
+  }
+</style>
