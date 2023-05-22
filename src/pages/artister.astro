@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
@@ -16,8 +18,50 @@ import "../styles/global.css";
     />
   </head>
   <body>
-    <header></header>
+    <Header />
+    <h1>Artister</h1>
+    <div class="grid1">
+      <div class="h3_hojre">
+        <h3>Ægte, råt, pop</h3>
+      </div>
+      <div class="h2_hojre"><h2>Jung</h2></div>
+    </div>
+    <div class="grid2">
+      <a class="knap1" href="/jung.html">Se artist</a>
+      <div class="billedehojre">
+        <img src="/img/billeder/jung4.webp" alt="jung" />
+      </div>
+    </div>
 
-    <footer></footer>
+    <Footer />
   </body>
 </html>
+
+<style>
+  .grid1 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+  .h3_hojre {
+    place-self: end end;
+  }
+
+  .h2_hojre {
+  }
+
+  .billedehojre {
+    grid-area: 1/1;
+  }
+  .billedehojre img {
+    clip: rect(200px, 0px, 0px, 200px);
+  }
+
+  .grid2 {
+    display: grid;
+  }
+  .knap1 {
+    grid-area: 1/1;
+    z-index: 1;
+    place-self: end end;
+  }
+</style>

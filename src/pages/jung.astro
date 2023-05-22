@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
@@ -16,20 +18,94 @@ import "../styles/global.css";
     />
   </head>
   <body>
-    <header></header>
-    <section>
-      <h1></h1><div><img src="" alt="" /><h2></h2></div><div>
-        <div><img src="" alt="" /></div>
-        <div><h3></h3><p></p></div>
-      </div>
+    <Header />
+    <section class="container">
+      <section class="">
+        <h1>Jung</h1>
+        <div>
+          <img src="" alt="" /><h2>
+            "Trioen genopdagede lykken i at spille musik, da de fandt sammen som
+            band"
+          </h2>
+        </div>
+        <div class="grid">
+          <div><img src="/img/billeder/jung1.webp" alt="Jung billede1" /></div>
+          <div>
+            <h3>Blitz Baby, Blitz Baby, Blitz</h3><p>
+              Pop Rock-bandet Jung består af 3 medlemmer; forsanger Jonas Jung,
+              guitarist Sigurd Boesen og trommeslager Michael Hovmand.
+            </p>
+
+            <p>
+              Bandet debuterede med deres single “Blitz” i 2020, som indtog de
+              danske hitlister og gav dem hele 5 priser til Gaffa Prisen samme
+              år.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="img2">
+          <img src="/img/billeder/jung2.webp" alt="Jung billede2" />
+        </div>
+        <div>
+          <h3>Hvordan blev jung til?</h3><p>
+            Sigurd Boesen og Michael Hovmand blev venner på et højskoleophold,
+            og senere introducerede han Michael til sin gymnasieven Jonas Jung -
+            og sådan blev bandet Jung til. Trioen fortæller, at de genopdagede
+            lykken i at spille musik, da de fandt sammen som band.
+          </p>
+        </div>
+      </section>
+      <section>
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/artist/2P6G4CYRAhpRKMXy097RSL?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </section>
     </section>
-    <section>
-      <div><img src="" alt="" /></div>
-      <div><h3></h3><p></p></div>
-    </section>
-    <section>
-      <!-- Spotify -->
-    </section>
-    <footer></footer>
+    <Footer />
   </body>
 </html>
+
+<style>
+  h2 {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-link);
+    color: var(--color-lime);
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  img {
+    min-width: screen;
+    margin-right: 0;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  section {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 60px;
+    }
+    .img2 {
+      order: 2;
+    }
+  }
+</style>

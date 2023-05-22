@@ -19,38 +19,99 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
-    <section>
+
+    <section class="section1">
       <div><h1>Grizzly Management</h1><h3>Med dig hele vejen</h3></div>
     </section>
     <!-- pil -->
     <div></div>
-    <section>
-      <div><h2>Artister</h2></div><div>
-        <p>
-          Vi repræsenterer fem utrolige artister; Jung, Aksglæde, Flaskedreng,
-          Zeina og Magnus Mønster, som er klar til at indtage de danske
-          musikscener og blæse dig bagover med deres musik.
-        </p>
-        <br />
-        <p>
-          Vi er dedikerede til at hjælpe vores artister med at nå deres fulde
-          potentiale og sikre deres succes.Vi repræsenterer fem utrolige
-          artister; Jung, Aksglæde, Flaskedreng, Zeina og Magnus Mønster, som er
-          klar til at indtage de danske musikscener og blæse dig bagover med
-          deres musik.
-        </p>
-        <br />
-        <a class="primary_small" href="">Udforsk artister</a>
-      </div><div>
-        <img src="" alt="" />
+    <section class="container">
+      <section class="section2">
+        <div class="section2h2"><h2>Artister</h2></div>
+        <div class="tekst1">
+          <p>
+            Vi repræsenterer fem utrolige artister; Jung, Aksglæde, Flaskedreng,
+            Zeina og Magnus Mønster, som er klar til at indtage de danske
+            musikscener og blæse dig bagover med deres musik.
+          </p>
+          <br />
+          <p>
+            Vi er dedikerede til at hjælpe vores artister med at nå deres fulde
+            potentiale og sikre deres succes.Vi repræsenterer fem utrolige
+            artister; Jung, Aksglæde, Flaskedreng, Zeina og Magnus Mønster, som
+            er klar til at indtage de danske musikscener og blæse dig bagover
+            med deres musik.
+          </p>
+          <br />
+          <div>
+            <a class="primary_small" href="">Udforsk artister</a>
+          </div>
+        </div>
+      </section>
+      <div class="billede1">
+        <img src="/img/billeder/aksglaede1.webp" alt="" />
       </div>
-    </section>
-    <section>
-      <div><p></p><a href=""></a></div>
-      <div><h2></h2></div><div><img src="" alt="" /></div>
+      <section>
+        <div><p></p><a href=""></a></div>
+        <div><h2></h2></div><div><img src="" alt="" /></div>
+      </section>
     </section>
     <Footer />
   </body>
-</html>
 
-<style></style>
+  <style>
+    .section1 {
+      margin-bottom: 300px;
+    }
+    .section2 {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      margin-bottom: 40px;
+    }
+    .primary_small {
+      place-self: end;
+    }
+
+    .tekst1 div {
+      place-self: end end;
+      margin-top: 35px;
+    }
+
+    .section2h2 {
+      margin-left: -100px;
+      margin-right: -90px;
+      margin-top: 90px;
+    }
+    .tekst1 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      -ms-transform: rotate(90deg); /* IE 9 */
+      transform: rotate(90deg);
+      float: left;
+      z-index: 1;
+    }
+
+    .billede1 {
+      position: relative;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      z-index: -9999;
+    }
+
+    @media (min-width: 600px) {
+      .section2h2 {
+        margin-left: -170px;
+        margin-right: -170px;
+        margin-top: 90px;
+      }
+
+      .section2 {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+      }
+    }
+  </style>
+</html>
