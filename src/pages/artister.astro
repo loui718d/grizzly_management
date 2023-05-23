@@ -19,7 +19,7 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
-    <h1>Artister</h1>
+    <h1 class="container">Artister</h1>
     <div class="grid1">
       <div class="h3_hojre">
         <h3>Ægte, råt, pop</h3>
@@ -27,7 +27,7 @@ import "../styles/global.css";
       <div class="h2_hojre"><h2>Jung</h2></div>
     </div>
     <div class="grid2">
-      <a class="knap1" href="/jung.html">Se artist</a>
+      <a class="knap1 secondary_small" href="/jung.html">Se artist</a>
       <div class="billedehojre">
         <img src="/img/billeder/jung4.webp" alt="jung" />
       </div>
@@ -41,27 +41,44 @@ import "../styles/global.css";
   .grid1 {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    position: relative;
   }
   .h3_hojre {
     place-self: end end;
   }
 
   .h2_hojre {
+    transform-origin: top right;
+    right: 0;
+    top: 0;
+    transform: rotate(90deg) translateX(100%);
   }
 
   .billedehojre {
     grid-area: 1/1;
+    place-self: end end;
   }
   .billedehojre img {
-    clip: rect(200px, 0px, 0px, 200px);
+    border-radius: var(--radius-card-1-mob);
+    min-height: 340px;
   }
 
   .grid2 {
     display: grid;
+    margin-left: 30px;
   }
   .knap1 {
     grid-area: 1/1;
     z-index: 1;
     place-self: end end;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: 800px) {
+    .billedehojre img {
+      border-radius: var(--radius-card-1-desk);
+      max-height: 530px;
+    }
   }
 </style>

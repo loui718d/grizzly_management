@@ -151,6 +151,26 @@ a {
   color: var(--color-sort);
 }
 
+.secondary_small {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 14px 42px;
+  gap: 10px;
+  width: 195px;
+  height: 45px;
+  color: var(--color-sort);
+  text-decoration: none;
+  border-radius: 8px;
+  background-color: var(--color-lime);
+}
+
+.secondary_small:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border: 3px solid var(--color-lime);
+  color: var(--color-lime);
+}
+
 /* Desktop font styling */
 @media (min-width: 600px) {
   h1 {
