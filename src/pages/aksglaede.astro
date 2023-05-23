@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
@@ -16,20 +18,96 @@ import "../styles/global.css";
     />
   </head>
   <body>
-    <header></header>
-    <section>
-      <h1></h1><div><img src="" alt="" /><h2></h2></div><div>
-        <div><img src="" alt="" /></div>
-        <div><h3></h3><p></p></div>
-      </div>
+    <Header />
+    <section class="container">
+      <section class="">
+        <h1>Aksglæde</h1>
+        <div>
+          <img src="" alt="" /><h2>
+            “Aksglæde er popkunstner uden filter i en moderne verden.”
+          </h2>
+        </div>
+        <div class="grid">
+          <div>
+            <img src="/img/billeder/aksglaede3.webp" alt="Aksglæde billede1" />
+          </div>
+          <div>
+            <h3>En helt almindelig fyr</h3><p>
+              Jakob Aksglæde Pedersen, kendt som Aksglæde, definerer sig selv
+              som helt almindelig, men samtidig er han sin egen. Aksglæde er
+              popkunstner uden filter i en moderne verden - hans musik er ægte,
+              hjertevarmt og catchy.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="img2">
+          <img src="/img/billeder/aksglaede4.webp" alt="Jung billede2" />
+        </div>
+        <div>
+          <h3>Giv lys igen</h3><p>
+            I 2020 udkom Aksglæde med nummeret Giv Lys igen, som indtog de
+            danske hitlister og blev en landsdækkende ørehænger. En af grundene
+            til Aksglædes stigende popularitet skyldes hans relaterbare tekster.
+            Musikken rammer bare noget i vores hjerter. Aksglæde står også bag
+            numrene I Nat og PromilleRomantikken.
+          </p>
+        </div>
+      </section>
+      <section>
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/artist/38OuwRRstYfgqeP4EciiWU?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </section>
     </section>
-    <section>
-      <div><img src="" alt="" /></div>
-      <div><h3></h3><p></p></div>
-    </section>
-    <section>
-      <!-- Spotify -->
-    </section>
-    <footer></footer>
+    <Footer />
   </body>
 </html>
+
+<style>
+  h2 {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-link);
+    color: var(--color-lime);
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    margin-right: 0;
+    max-height: 300px;
+    object-fit: cover; /* Skalér billedet for at fylde beholderen */
+    object-position: 70% 40%; /* Juster positionen ved hjælp af procentværdier */
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  section {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 60px;
+      gap: 20px;
+    }
+    .img2 {
+      order: 2;
+    }
+  }
+</style>

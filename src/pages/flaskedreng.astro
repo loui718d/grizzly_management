@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
@@ -16,20 +18,101 @@ import "../styles/global.css";
     />
   </head>
   <body>
-    <header></header>
-    <section>
-      <h1></h1><div><img src="" alt="" /><h2></h2></div><div>
-        <div><img src="" alt="" /></div>
-        <div><h3></h3><p></p></div>
-      </div>
+    <Header />
+    <section class="container">
+      <section class="">
+        <h1>Flaskedreng</h1>
+        <div>
+          <img src="" alt="" /><h2>
+            “Han henter inspiration fra sit ungdomsliv og bringer en autentisk
+            stemme til den danske hiphop-scene.”
+          </h2>
+        </div>
+        <div class="grid">
+          <div>
+            <img
+              src="/img/billeder/flaskedreng3.webp"
+              alt="Aksglæde billede1"
+            />
+          </div>
+          <div>
+            <h3>En 19-årig knægt fra Vesterbro</h3><p>
+              Som en 19-årig knægt opvokset på Vesterbro, har Flaskedreng mere
+              på hjertet, end man lige skulle tro. Han henter inspiration fra
+              sit ungdomsliv og bringer en autentisk stemme til den danske
+              hiphop-scene.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="img2">
+          <img src="/img/billeder/flaskedreng5.webp" alt="Jung billede2" />
+        </div>
+        <div>
+          <h3>En ny hiphop lyd</h3><p>
+            Flaskedreng repræsenterer hiphop-lyden, vi ville høre fremover. "Vi
+            børn der ikke læser, vi ville ønske vi var 18. Men så bliver’ man
+            det, og man står med et ansvar", lyder det i Flaskedrengs seneste
+            hit. Med sin seriøse, følsomme og poetiske lyrik skaber han et
+            univers, hvor man drages ind i historierne. Flaskedrengs timing og
+            flow er uden sammenligning og skaber en musikalsk oplevelse, som man
+            sent vil glemme.
+          </p>
+        </div>
+      </section>
+      <section>
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/artist/5DGY5btPuI2CHAQyfiHaXi?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </section>
     </section>
-    <section>
-      <div><img src="" alt="" /></div>
-      <div><h3></h3><p></p></div>
-    </section>
-    <section>
-      <!-- Spotify -->
-    </section>
-    <footer></footer>
+    <Footer />
   </body>
 </html>
+
+<style>
+  h2 {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-link);
+    color: var(--color-lime);
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    margin-right: 0;
+    max-height: 300px;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  section {
+    margin-top: 30px;
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 60px;
+      gap: 20px;
+    }
+    .img2 {
+      order: 2;
+    }
+  }
+</style>

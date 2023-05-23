@@ -1,4 +1,6 @@
 ---
+import Card1 from "../components/Card1.astro";
+import Card2 from "../components/Card2.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "../styles/global.css";
@@ -19,66 +21,51 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
+
     <h1 class="container">Artister</h1>
-    <div class="grid1">
-      <div class="h3_hojre">
-        <h3>Ægte, råt, pop</h3>
-      </div>
-      <div class="h2_hojre"><h2>Jung</h2></div>
-    </div>
-    <div class="grid2">
-      <a class="knap1 secondary_small" href="/jung.html">Se artist</a>
-      <div class="billedehojre">
-        <img src="/img/billeder/jung4.webp" alt="jung" />
-      </div>
-    </div>
+    <Card1
+      title="Ægte, råt, pop"
+      title2="Jung"
+      alt="Jung"
+      src="/img/billeder/jung4.webp"
+      href="/jung.html"
+    />
+    <Card2
+      title="Lyrisk kærlighed"
+      title2="Aksglæde"
+      alt="Aksglæde"
+      src="/img/billeder/aksglaede2.webp"
+      href="/aksglaede.html"
+    />
+    <Card1
+      title="Et barn af natten"
+      title2="Flaskedreng"
+      alt="Flaskedreng"
+      src="/img/billeder/flaskedreng4.webp"
+      href="/flaskedreng.html"
+    />
+
+    <Card2
+      title="Følelsesladet og ægte"
+      title2="Magnus Münster"
+      alt="Magnus Münster"
+      src="/img/billeder/magnus3.webp"
+      href="/magnus.html"
+    />
+
+    <Card1
+      title="Eksperimenterende RNB"
+      title2="Zaina"
+      alt="Zaina"
+      src="/img/billeder/zaina4.webp"
+      href="/zaina.html"
+    />
 
     <Footer />
   </body>
 </html>
 
 <style>
-  .grid1 {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    position: relative;
-  }
-  .h3_hojre {
-    place-self: end end;
-  }
-
-  .h2_hojre {
-    transform-origin: top right;
-    right: 0;
-    top: 0;
-    transform: rotate(90deg) translateX(100%);
-  }
-
-  .billedehojre {
-    grid-area: 1/1;
-    place-self: end end;
-  }
-  .billedehojre img {
-    border-radius: var(--radius-card-1-mob);
-    min-height: 340px;
-  }
-
-  .grid2 {
-    display: grid;
-    margin-left: 30px;
-  }
-  .knap1 {
-    grid-area: 1/1;
-    z-index: 1;
-    place-self: end end;
-    margin-bottom: 10px;
-    margin-right: 10px;
-  }
-
   @media (min-width: 800px) {
-    .billedehojre img {
-      border-radius: var(--radius-card-1-desk);
-      max-height: 530px;
-    }
   }
 </style>

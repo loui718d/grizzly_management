@@ -42,9 +42,23 @@ import "../styles/global.css";
 
 <style>
   header {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    right: 10;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    z-index: 9999;
+  }
+
+  header.scrolled {
+    background-color: black; /* Ændr farven til den ønskede farve, når der scrolles */
   }
 
   .logo img {
@@ -194,4 +208,19 @@ import "../styles/global.css";
 
   // Lyt efter klik på luk knap
   closeButton.addEventListener("click", closeSidePanel);
+
+  // Hent referencer til elementet
+  const header = document.querySelector("header");
+
+  // Funktion til at ændre headerens baggrundsfarve, når der scrolles
+  function handleScroll() {
+    if (window.pageYOffset > 0) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  }
+
+  // Lyt efter scroll-hændelse på vinduet
+  window.addEventListener("scroll", handleScroll);
 </script>

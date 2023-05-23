@@ -1,0 +1,81 @@
+---
+import "../styles/global.css";
+const { href, title, title2, src, alt } = Astro.props;
+---
+
+<div class="grid3">
+  <div class="h2_venstre"><h2>{title2}</h2></div>
+  <div class="h3_venstre">
+    <h3>{title}</h3>
+  </div>
+</div>
+<div class="grid4">
+  <a class="knap1 secondary_small" href={href}>Se artist</a>
+  <div class="billedevenstre">
+    <img src={src} alt={alt} />
+  </div>
+</div>
+
+<style>
+  .grid3 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    position: relative;
+  }
+  .h3_venstre {
+    justify-self: start;
+    text-align: left;
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+
+  h3,
+  h2 {
+    color: var(--color-lime);
+  }
+
+  .h2_venstre {
+    transform-origin: top left;
+    place-self: start start;
+    left: 0;
+    top: 0;
+    margin-left: 0px;
+    transform: rotate(90deg) translateY(-100%);
+  }
+
+  .billedevenstre {
+    grid-area: 1/1;
+    place-self: start start;
+  }
+  .billedevenstre img {
+    border-radius: var(--radius-card-2-mob);
+    min-height: 340px;
+  }
+
+  .grid4 {
+    display: grid;
+    margin-right: 30px;
+    margin-bottom: 100px;
+  }
+  .knap1 {
+    grid-area: 1/1;
+    z-index: 1;
+    place-self: end start;
+    margin-bottom: 30px;
+    margin-left: 120px;
+  }
+
+  @media (min-width: 600px) {
+    .billedevenstre img {
+      border-radius: var(--radius-card-2-desk);
+      max-height: 530px;
+    }
+    .knap1 {
+      grid-area: 1/1;
+      z-index: 1;
+      place-self: end start;
+      margin-bottom: 50px;
+      margin-left: 180px;
+    }
+  }
+</style>
