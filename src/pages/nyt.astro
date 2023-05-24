@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
@@ -16,9 +18,14 @@ import "../styles/global.css";
     />
   </head>
   <body>
-    <div>
-      <h1></h1><p></p>
+    <Header />
+    <div class="container">
+      <h1>nyt</h1><p>
+        Følg med i hvad der sker med vores artister og meget mere på vores
+        instagram
+      </p>
       <!-- indsæt insta -->
     </div>
+    <Footer />
   </body>
 </html>

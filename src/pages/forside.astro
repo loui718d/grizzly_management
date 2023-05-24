@@ -32,10 +32,11 @@ import "../styles/global.css";
           <h1>Grizzly Management</h1><h3>Med dig hele vejen</h3>
         </div>
       </div>
+      <div id="scroll-indicator" class="scroll-indicator bounce">
+        <img src="/img/ikoner/pil.svg" alt="pil" />
+      </div>
     </section>
 
-    <!-- pil -->
-    <div></div>
     <section class="container">
       <section class="section2">
         <div class="section2h2"><h2>Artister</h2></div>
@@ -62,10 +63,24 @@ import "../styles/global.css";
       <div class="billede1">
         <img src="/img/billeder/aksglaede1.webp" alt="" />
       </div>
-      <section>
-        <div><p></p><a href=""></a></div>
-        <div><h2></h2></div><div><img src="" alt="" /></div>
+      <section class="section3">
+        <div class="tekst2">
+          <p>
+            Vores erfarne team, bestående af Ryan Bjørn Hansen og Rasmus
+            Moosdorf, har over 15 års erfaring i musikbranchen og ved, hvad der
+            skal til for at få artister ud i rampelyset og slå igennem.  Vi tror
+            på mennesker med talent og at drømme skal udleves. Med den helt
+            rette støtte og dialog, kan der leveres store resultater. Hos
+            Grizzly Management finder du en tryg og professionel partner, der
+            hjælper artister med at finde deres vej i musikbranchen.
+          </p>
+          <div><a class="primary_small" href="/om_os.html">Læse mere</a></div>
+        </div>
+        <div class="section3h2"><h2>Om os</h2></div>
       </section>
+      <div>
+        <img src="/img/billeder/om1.webp" alt="Ryan og Rasmus" />
+      </div>
     </section>
     <Footer />
   </body>
@@ -76,6 +91,7 @@ import "../styles/global.css";
       overflow: hidden;
       top: 0;
       left: 0;
+      padding-bottom: 100px;
     }
 
     .video-container {
@@ -99,8 +115,8 @@ import "../styles/global.css";
 
     .content {
       z-index: 1;
-      margin-right: 50px;
-      margin-left: 20px;
+      /* margin-right: 50px;
+      margin-left: 20px; */
       /* Tilpas styling for tekst og header efter behov */
     }
 
@@ -109,11 +125,47 @@ import "../styles/global.css";
       padding-top: 300px;
     }
 
+    /* pil */
+    /* Centreret pil */
+    .scroll-indicator {
+      position: absolute;
+      left: 50%;
+      bottom: 30px; /* Juster afstanden fra bunden efter behov */
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      z-index: 2;
+    }
+
+    .scroll-indicator.fade-in {
+      opacity: 1;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateX(-50%) translateY(0);
+      }
+      50% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+    .scroll-indicator img {
+      object-fit: cover;
+      width: 20px; /* Juster bredden efter behov */
+      transition: transform 0.5s ease-in-out; /* Overgangseffekt */
+    }
+
     .section2 {
       display: grid;
       grid-template-columns: 1fr 4fr;
       margin-bottom: 40px;
-      margin-top: 160px;
+      margin-top: 100px;
     }
     .primary_small {
       place-self: end;
@@ -129,15 +181,15 @@ import "../styles/global.css";
       margin-right: -90px;
       margin-top: 90px;
     }
+
     .tekst1 {
       display: flex;
       flex-direction: column;
     }
 
-    h2 {
+    .section2 h2 {
       -ms-transform: rotate(90deg); /* IE 9 */
       transform: rotate(90deg);
-      float: left;
       z-index: 1;
     }
 
@@ -148,7 +200,50 @@ import "../styles/global.css";
       z-index: -9999;
     }
 
+    .section3 {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      margin-bottom: 40px;
+      margin-top: 160px;
+    }
+
+    .section3 h2 {
+      -ms-transform: rotate(90deg); /* IE 9 */
+      transform: rotate(90deg);
+
+      z-index: 1;
+    }
+
+    .section3h2 {
+      transform-origin: bottom right;
+      margin-top: 40px;
+      margin-right: -58px;
+      margin-left: -40px;
+      white-space: nowrap;
+    }
+
+    .tekst2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tekst2 div {
+      place-self: start end;
+      margin-top: 35px;
+    }
+
     @media (min-width: 600px) {
+      .scroll-indicator {
+        position: absolute;
+        left: 50%;
+        bottom: 70px; /* Juster afstanden fra bunden efter behov */
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: bounce 1.5s infinite;
+        z-index: 2;
+      }
       .section2h2 {
         margin-left: -170px;
         margin-right: -170px;
@@ -158,6 +253,7 @@ import "../styles/global.css";
       .section2 {
         display: grid;
         grid-template-columns: 1fr 4fr;
+        margin-top: 250px;
       }
 
       h1 {
@@ -171,5 +267,71 @@ import "../styles/global.css";
         text-align: right;
       }
     }
+
+    /* pil effekt */
+
+    .bounce {
+      -webkit-animation: bounce 1.5s infinite;
+      animation: bounce 1.5s infinite;
+    }
+
+    .fade-in-top {
+      -webkit-animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 3s
+        both;
+      animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) 3s both;
+    }
+    /* ----------------------------------------------
+ * Generated by Animista on 2023-5-24 11:59:16
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+    /**
+ * ----------------------------------------
+ * animation fade-in-top
+ * ----------------------------------------
+ */
+    @-webkit-keyframes fade-in-top {
+      0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-top {
+      0% {
+        -webkit-transform: translateY(-50px);
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   </style>
+
+  <!-- <script>
+    const fade = document.querySelector("#scroll-indicator");
+
+    fade.addEventListener("animationiteration", bounceStart);
+
+    function bounceStart() {
+      this.classList = "";
+      this.firstElementChild.classList = "";
+
+      //genstarter
+      this.offsetLeft;
+      this.firstElementChild.offsetLeft;
+
+      this.classList.add("bounce");
+    }
+  </script> -->
 </html>
