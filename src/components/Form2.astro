@@ -45,7 +45,7 @@ import "../styles/global.css";
       placeholder="Indtast din besked"
       required></textarea>
   </div>
-  <button type="submit">Send</button>
+  <button class="secondary_large a" type="submit">Send</button>
 </form>
 
 <style>
@@ -92,16 +92,17 @@ import "../styles/global.css";
     font-weight: var(--font-weight-light);
   }
 
-  button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+  input[type="file"]::file-selector-button {
     cursor: pointer;
+
+    color: white;
+    padding: 10px;
+    border: 1px solid var(--color-hvid);
+    border-radius: 8px;
+    background-color: transparent;
   }
 
-  button[type="submit"]:hover {
-    background-color: #45a049;
+  input[type="file"]::file-selector-button:hover {
+    background-color: var(--color-lime-140);
   }
 </style>
