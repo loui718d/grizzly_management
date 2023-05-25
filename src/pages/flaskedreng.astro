@@ -22,10 +22,10 @@ import "../styles/global.css";
     <section class="container">
       <section class="">
         <h1>Flaskedreng</h1>
-        <div>
-          <img src="" alt="" /><h2>
-            “Han henter inspiration fra sit ungdomsliv og bringer en autentisk
-            stemme til den danske hiphop-scene.”
+        <div class="h2">
+          <img src="/img/ikoner/citat.svg" alt="citat" /><h2>
+            Han henter inspiration fra sit ungdomsliv og bringer en autentisk
+            stemme til den danske hiphop-scene.
           </h2>
         </div>
         <div class="grid">
@@ -81,13 +81,27 @@ import "../styles/global.css";
   h2 {
     font-family: var(--font-family-helvetica);
     font-size: var(--font-size-link);
-    color: var(--color-lime);
+    color: var(--color-lime-120);
     line-height: 22px;
     letter-spacing: 2px;
     font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     text-decoration: none;
+    max-width: 800px;
     text-align: center;
+    place-self: center;
+  }
+
+  .h2 {
+    display: grid;
+    padding-bottom: 80px;
+    padding-top: 0px;
+    justify-items: center;
+    gap: 15px;
+  }
+  .h2 img {
+    max-height: 50px;
+    width: 50px;
   }
 
   img {
@@ -104,6 +118,16 @@ import "../styles/global.css";
     margin-top: 30px;
   }
 
+  .grid {
+    margin-top: 50px;
+  }
+  h3 {
+    margin-top: 30px;
+  }
+  .section3 {
+    margin-top: 80px;
+  }
+
   @media (min-width: 800px) {
     .grid {
       display: grid;
@@ -113,6 +137,28 @@ import "../styles/global.css";
     }
     .img2 {
       order: 2;
+    }
+
+    h2 {
+      font-family: var(--font-family-helvetica);
+      font-size: 28px;
+      color: var(--color-lime-120);
+      line-height: 32px;
+      letter-spacing: 2px;
+      font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    h3 {
+      margin-top: 0px;
+    }
+    .h2 img {
+      max-height: 80px;
+      width: 60px;
+    }
+
+    .h2 {
+      gap: 20px;
     }
   }
 </style>

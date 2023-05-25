@@ -22,7 +22,7 @@ import "../styles/global.css";
     <section class="container">
       <section>
         <div>
-          <h1>Om Grizzly</h1><p>
+          <h1>Om Grizzly</h1><p class="intro">
             Grizzly Management arbejder strategisk med alle aspekter af vores
             artisters forretning. Vores fokus er at udvikle sunde og langsigtede
             karrierer og håndtere alle interessenter med afsæt i vores artisters
@@ -30,54 +30,153 @@ import "../styles/global.css";
             brands. Vi er nytænkende og vil gerne udfordre de traditionelle
             måder at arbejde med musik og artister på. Derudover sikrer vi altid
             at vores artister har de bedst mulige vilkår i et marked som er
-            under konstant forandring
+            under konstant forandring.
           </p>
-          <img src="/img/billeder/om1.webp" alt="" />
+          <img class="billede1" src="/img/billeder/om1.webp" alt="" />
         </div>
       </section>
       <section>
-        <div><h2>Teamet</h2></div>
-        <div><img src="/img/billeder/om1.webp" alt="" /></div>
-        <div>
-          <h3>Ryan Bjørn hansen Manager</h3>
-          <h3>Founder & Manager</h3>
-          <p>
-            Bag Grizzly Manager står Ryan Bjørn Hansen. Hans baggrund udspringer
-            fra marketing, hvor han har været ansvarlig for store internationale
-            brands bl.a. i Orkla koncernen. I 2012 kom han til Warner Music og
-            har siden beskæftiget sig med musikbranchen. Efter Warner Music gik
-            vejen forbi Live Nation hvor han bl.a. sad i ledelsen på Heartland
-            Festival og var med til at starte festivalen tilbage i 2016. Igennem
-            årene har han arbejdet meget med krydsfeltet mellem artister og
-            brands, hvilket har resulteret i samarbejder med bl.a. Audi, TAG
-            Heuer, Aqua D’or, Calvin Klein, H2O, Garment Project, BMW, B&O,
-            Royal Unibrew, Diageo, Hansen Is, Circle K mf.
-          </p>
+        <div class="baggrund_grid">
+          <div>
+            <p>
+              Bag Grizzly Management står Ryan Bjørn Hansen. Hans baggrund
+              udspringer fra marketing, hvor han har været ansvarlig for store
+              internationale brands bl.a. i Orkla koncernen. I 2012 kom han til
+              Warner Music og har siden beskæftiget sig med musikbranchen. Efter
+              Warner Music gik vejen forbi Live Nation hvor han bl.a. sad i
+              ledelsen på Heartland Festival og var med til at starte festivalen
+              tilbage i 2016. Igennem årene har han arbejdet meget med
+              krydsfeltet mellem artister og brands, hvilket har resulteret i
+              samarbejder med bl.a. Audi, TAG Heuer, Aqua D’or, Calvin Klein,
+              H2O, Garment Project, BMW, B&O, Royal Unibrew, Diageo, Hansen Is,
+              Circle K mf.
+            </p><br /><p>
+              I 2021 blev Rasmus Moosdorf ansat som Manager og EA (Executive
+              Assistant) for at yde yderligere support til vores artister og
+              udviklingen af deres karriere.
+            </p>
+          </div>
+          <div class="h2"><h2>Baggrund</h2></div>
         </div>
-      </section>
-      <section>
-        <div><img src="/img/billeder/om1.webp" alt="" /></div>
-        <div>
-          <h3>Rasmus Moosdorf</h3>
-          <h3>Manager & EA</h3>
-          <p>
-            I 2021 blev Rasmus Moosdorf ansat som Manager og EA (Executive
-            Assistant) for at yde yderligere support til vores artister og
-            udviklingen af deres karriere.
-          </p>
+
+        <div class="grid2">
+          <div class="team">
+            <img class="billede2" src="/img/billeder/ryan.webp" alt="Ryan" /><h3
+              class="a"
+            >
+              Founder & Manager
+            </h3>
+            <h3 class="a">Ryan Bjørn Hansen</h3><h3 class="a">
+              Ryan@grizzlymanagement.dk
+            </h3>
+          </div>
+          <div>
+            <img
+              class="billede3"
+              src="/img/billeder/moos.webp"
+              alt="Rasmus"
+            /><h3 class="a">Manager & EA</h3>
+            <h3 class="a">Rasmus Moosdorf</h3><h3 class="a">
+              Rasmus@grizzlymanagement.dk
+            </h3>
+          </div>
         </div>
       </section>
     </section>
     <Footer />
   </body>
-</html>
 
-<style>
-  h2 {
-    color: var(--color-lime);
-    -ms-transform: rotate(90deg); /* IE 9 */
-    transform: rotate(90deg);
-    margin-top: 100px;
-    margin-right: 300px;
-  }
-</style>
+  <style>
+    .intro {
+      max-width: 850px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      -ms-transform: rotate(90deg); /* IE 9 */
+      transform: rotate(90deg);
+    }
+
+    .baggrund_grid {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      margin-bottom: 40px;
+      margin-top: 160px;
+    }
+    .h2 {
+      margin-top: 50px;
+      margin-right: -58px;
+      margin-left: -40px;
+      transform-origin: top right;
+      max-width: 200px;
+    }
+    .billede1 {
+      margin-top: 20px;
+    }
+    .billede2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      margin-right: 0;
+      max-height: 300px;
+      object-fit: cover; /* Skalér billedet for at fylde beholderen */
+      object-position: 80% 10%; /* Juster positionen ved hjælp af procentværdier */
+    }
+    .billede3 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      width: 100%;
+      margin-right: 0;
+      max-height: 300px;
+      object-fit: cover; /* Skalér billedet for at fylde beholderen */
+      object-position: 80% 10%; /* Juster positionen ved hjælp af procentværdier */
+    }
+
+    .a {
+      color: var(--color-sort-20);
+    }
+    .a:hover {
+      color: var(--color-sort-20);
+    }
+    .grid2 {
+      margin-bottom: 200px;
+    }
+
+    @media (min-width: 800px) {
+      .h2 {
+        margin-top: 110px;
+        margin-right: -58px;
+        margin-left: -40px;
+        transform-origin: top right;
+        max-width: 400px;
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 70px;
+      }
+      .billede1 {
+        margin-top: 20px;
+        width: 100%;
+        margin-right: 0;
+        max-height: 500px;
+        object-fit: cover; /* Skalér billedet for at fylde beholderen */
+        object-position: 80% 10%; /* Juster positionen ved hjælp af procentværdier */
+      }
+
+      .billede2 {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        width: 100%;
+        margin-right: 0;
+        max-height: auto;
+      }
+      .billede3 {
+        margin-top: 0px;
+        margin-bottom: 20px;
+        width: 100%;
+        margin-right: 0;
+        max-height: auto;
+      }
+    }
+  </style>
+</html>

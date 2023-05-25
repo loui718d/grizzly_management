@@ -31,14 +31,14 @@
   --media-query-max-width-desktop: 1169px;
   --font-family-leage: "League Gothic", sans-serif;
   --font-family-helvetica: Helvetica, sans-serif;
-  --font-size-h1-mobil: 84px;
+  --font-size-h1-mobil: 74px;
   --font-size-h2-mobil: 95px;
   --font-size-h3-mobil: 16px;
   --font-size-body-mobil: 16px;
   --font-size-button-mobil: 14px;
-  --font-size-h1-desktop: 200px;
-  --font-size-h2-desktop: 180px;
-  --font-size-h3-desktop: 28px;
+  --font-size-h1-desktop: 180px;
+  --font-size-h2-desktop: 160px;
+  --font-size-h3-desktop: 20px;
   --font-size-body-desktop: 18px;
   --font-size-button-desktop: 18px;
   --font-size-link: 18px;
@@ -194,7 +194,7 @@ a {
 }
 
 /* Desktop font styling */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   h1 {
     font-family: var(--font-family-leage);
     font-size: var(--font-size-h1-desktop);
