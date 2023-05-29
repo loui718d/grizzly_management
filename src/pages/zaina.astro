@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import "../styles/global.css";
 ---
 
@@ -7,7 +9,7 @@ import "../styles/global.css";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Zai</title>
+    <title>Flaskedreng</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,20 +18,140 @@ import "../styles/global.css";
     />
   </head>
   <body>
-    <header></header>
-    <section>
-      <h1></h1><div><img src="" alt="" /><h2></h2></div><div>
-        <div><img src="" alt="" /></div>
-        <div><h3></h3><p></p></div>
-      </div>
+    <Header />
+    <section class="container">
+      <section class="">
+        <h1>Zaina</h1>
+        <div class="h2">
+          <img src="/img/ikoner/citat.svg" alt="citat" /><h2>
+            Zaina optrådte med Rahims sang ‘Når Mænd Græder,’ hvor hun tog salen
+            med storm og rørte folk med sin unikke stemme.
+          </h2>
+        </div>
+        <div class="grid">
+          <div>
+            <img src="/img/billeder/zaina4.webp" alt="Magnus billede 1" />
+          </div>
+          <div>
+            <h3>Upcoming RnB artist</h3><p>
+              Zaina Jouret Segujja, kendt som Zaina, er en upcoming artist inden
+              for RnB genren. Tidligere har hun deltaget i x-factor, hvor man
+              for første gang hørte hendes stemme på tv.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="grid">
+        <div class="img2">
+          <img src="/img/billeder/zaina2.webp" alt="Magnus billede 2" />
+        </div>
+        <div>
+          <h3>P3 Guld 2022</h3><p>
+            Zaina blev for alvor kendt i P3 Guld i 2022, da hun optrådte som
+            stedfortræder for Tobias Rahim. Zaina optrådte med Rahims sang ‘Når
+            Mænd Græder,’ hvor hun tog salen med storm og rørte folk med sin
+            unikke stemme.
+          </p>
+        </div>
+      </section>
+      <section>
+        <iframe
+          style="border-radius:12px"
+          src="https://open.spotify.com/embed/artist/7fwnH4uy8mo721oa6K4kBS?utm_source=generator&theme=0"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </section>
     </section>
-    <section>
-      <div><img src="" alt="" /></div>
-      <div><h3></h3><p></p></div>
-    </section>
-    <section>
-      <!-- Spotify -->
-    </section>
-    <footer></footer>
+    <Footer />
   </body>
 </html>
+
+<style>
+  h2 {
+    font-family: var(--font-family-helvetica);
+    font-size: var(--font-size-link);
+    color: var(--color-lime-120);
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    text-decoration: none;
+    max-width: 800px;
+    text-align: center;
+    place-self: center;
+  }
+
+  .h2 {
+    display: grid;
+    padding-bottom: 40px;
+    padding-top: 0px;
+    justify-items: center;
+    gap: 15px;
+  }
+  .h2 img {
+    max-height: 50px;
+    width: 50px;
+  }
+
+  img {
+    width: 100%;
+    margin-right: 0;
+    max-height: 300px;
+  }
+
+  p {
+    margin-top: 20px;
+  }
+
+  section {
+    margin-top: 30px;
+  }
+
+  .grid {
+    margin-top: 50px;
+  }
+  h3 {
+    margin-top: 30px;
+  }
+  .section3 {
+    margin-top: 80px;
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 60px;
+      gap: 20px;
+    }
+    .img2 {
+      order: 2;
+    }
+
+    h2 {
+      font-family: var(--font-family-helvetica);
+      font-size: 28px;
+      color: var(--color-lime-120);
+      line-height: 32px;
+      letter-spacing: 2px;
+      font-weight: var(--font-weight-bold);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    h3 {
+      margin-top: 0px;
+    }
+    .h2 img {
+      max-height: 80px;
+      width: 60px;
+    }
+
+    .h2 {
+      gap: 20px;
+    }
+  }
+</style>
