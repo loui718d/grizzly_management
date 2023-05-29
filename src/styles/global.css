@@ -53,12 +53,12 @@
 }
 
 body {
-  background-color: var(--color-sort);
+  background-color: rgba(0, 0, 0, 0.93);
 }
 
 img {
   object-fit: cover;
-  max-width: 100%;
+
   height: auto;
 }
 
