@@ -20,12 +20,105 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
-    <section class="container">
-      <div>
-        <h1>Send din demo</h1>
-        <Form2 />
+    <div class="parallax-container">
+      <div class="filter">
+        <img src="img/billeder/filter.png" alt="filter" />
       </div>
-    </section>
+      <div class="gradient parallax-image">
+        <img src="img/billeder/gradient2.png" alt="" />
+      </div>
+
+      <section class="container content">
+        <div>
+          <h1>Send din demo</h1>
+          <Form2 />
+        </div>
+      </section>
+    </div>
     <Footer />
   </body>
 </html>
+
+<style>
+  /* .gradient {
+    position: fixed;
+    top: 100px;
+    z-index: -998;
+    width: 500px;
+    left: 43%;
+  } */
+  .filter {
+    position: fixed;
+    height: 3000px;
+    z-index: -999;
+    opacity: 0.3;
+    filter: grayscale(100%);
+    object-fit: cover;
+  }
+
+  .filter img {
+    max-width: screen;
+    max-height: screen;
+  }
+
+  .parallax-container {
+    position: relative;
+    height: 1500px; /* Juster højden efter behov */
+    overflow: hidden;
+  }
+
+  .parallax-image {
+    position: absolute;
+    top: 100px;
+    left: 45%;
+
+    max-width: 100%;
+    /* background-image: url("img/billeder/gradient1.png"); */
+    background-size: cover;
+    transform: translateZ(1px) scale(0.5); /* Juster skaleringsfaktoren efter behov */
+  }
+  .parallax-image img {
+    width: 450px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 800px) {
+    /* .gradient {
+      position: fixed;
+      top: 100px;
+      z-index: -998;
+      width: 1200px;
+    } */
+    .filter {
+      position: fixed;
+      height: 100%;
+      z-index: -999;
+      opacity: 0.15;
+      filter: grayscale(100%);
+    }
+    .parallax-image {
+      width: 1200px;
+      max-width: 100%;
+    }
+
+    .parallax-image img {
+      width: 1400px;
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", function () {
+    const parallax = document.querySelector(".parallax-image");
+    let scrollPosition = window.pageYOffset;
+    parallax.style.transform =
+      "translateY(" +
+      scrollPosition * 1.2 +
+      "px)"; /* Juster hastigheden efter behov */
+  });
+</script>
