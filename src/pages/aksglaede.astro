@@ -7,6 +7,7 @@ import "../styles/global.css";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/img/ikoner/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Aksglæde</title>
@@ -27,54 +28,65 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
-    <section class="container">
-      <section class="">
-        <h1>Aksglæde</h1>
-        <div class="h2">
-          <img src="/img/ikoner/citat.svg" alt="citat" /><h2>
-            Aksglæde er popkunstner uden filter i en moderne verden.
-          </h2>
-        </div>
-        <div class="grid">
-          <div>
-            <img src="/img/billeder/aksglaede3.webp" alt="Aksglæde billede1" />
+    <div class="parallax-container">
+      <div class="filter">
+        <img src="img/billeder/filter.png" alt="filter" />
+      </div>
+      <div class="gradient parallax-image">
+        <img src="img/billeder/gradient1.png" alt="" />
+      </div>
+      <section class="container content">
+        <section class="">
+          <h1>Aksglæde</h1>
+          <div class="h2">
+            <img src="/img/ikoner/citat.svg" alt="citat" /><h2>
+              Aksglæde er popkunstner uden filter i en moderne verden.
+            </h2>
+          </div>
+          <div class="grid">
+            <div>
+              <img
+                src="/img/billeder/aksglaede3.webp"
+                alt="Aksglæde billede1"
+              />
+            </div>
+            <div>
+              <h3>En helt almindelig fyr</h3><p>
+                Jakob Aksglæde Pedersen, kendt som Aksglæde, definerer sig selv
+                som helt almindelig, men samtidig er han sin egen. Aksglæde er
+                popkunstner uden filter i en moderne verden - hans musik er
+                ægte, hjertevarmt og catchy.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="grid">
+          <div class="img2">
+            <img src="/img/billeder/aksglaede4.webp" alt="Jung billede2" />
           </div>
           <div>
-            <h3>En helt almindelig fyr</h3><p>
-              Jakob Aksglæde Pedersen, kendt som Aksglæde, definerer sig selv
-              som helt almindelig, men samtidig er han sin egen. Aksglæde er
-              popkunstner uden filter i en moderne verden - hans musik er ægte,
-              hjertevarmt og catchy.
+            <h3>Giv lys igen</h3><p>
+              I 2020 udkom Aksglæde med nummeret Giv Lys igen, som indtog de
+              danske hitlister og blev en landsdækkende ørehænger. En af
+              grundene til Aksglædes stigende popularitet skyldes hans
+              relaterbare tekster. Musikken rammer bare noget i vores hjerter.
+              Aksglæde står også bag numrene I Nat og PromilleRomantikken.
             </p>
           </div>
-        </div>
+        </section>
+        <section>
+          <iframe
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/artist/38OuwRRstYfgqeP4EciiWU?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </section>
       </section>
-      <section class="grid">
-        <div class="img2">
-          <img src="/img/billeder/aksglaede4.webp" alt="Jung billede2" />
-        </div>
-        <div>
-          <h3>Giv lys igen</h3><p>
-            I 2020 udkom Aksglæde med nummeret Giv Lys igen, som indtog de
-            danske hitlister og blev en landsdækkende ørehænger. En af grundene
-            til Aksglædes stigende popularitet skyldes hans relaterbare tekster.
-            Musikken rammer bare noget i vores hjerter. Aksglæde står også bag
-            numrene I Nat og PromilleRomantikken.
-          </p>
-        </div>
-      </section>
-      <section>
-        <iframe
-          style="border-radius:12px"
-          src="https://open.spotify.com/embed/artist/38OuwRRstYfgqeP4EciiWU?utm_source=generator&theme=0"
-          width="100%"
-          height="352"
-          frameborder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"></iframe>
-      </section>
-    </section>
+    </div>
     <Footer />
   </body>
 </html>
@@ -132,6 +144,72 @@ import "../styles/global.css";
     margin-top: 80px;
   }
 
+  /* gradient og filter */
+  .filter {
+    position: fixed;
+    height: 3000px;
+    z-index: -999;
+    opacity: 0.2;
+    filter: grayscale(100%);
+    object-fit: cover;
+  }
+
+  .filter img {
+    max-width: screen;
+    max-height: screen;
+  }
+
+  .parallax-container {
+    position: relative;
+    height: 2000px; /* Juster højden efter behov */
+    overflow: hidden;
+  }
+
+  .parallax-image {
+    position: absolute;
+    top: 100px;
+    left: 58%;
+
+    max-width: 100%;
+    /* background-image: url("img/billeder/gradient1.png"); */
+    background-size: cover;
+    transform: translateZ(1px) scale(0.5); /* Juster skaleringsfaktoren efter behov */
+  }
+  .parallax-image img {
+    width: 450px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 800px) {
+    /* .gradient {
+      position: fixed;
+      top: 100px;
+      z-index: -998;
+      width: 1200px;
+    } */
+    .filter {
+      position: fixed;
+      height: 100%;
+      z-index: -999;
+      opacity: 0.2;
+      filter: grayscale(100%);
+    }
+    .parallax-image {
+      width: 1200px;
+      max-width: 100%;
+    }
+
+    .parallax-image img {
+      width: 1400px;
+    }
+  }
+
   @media (min-width: 800px) {
     .grid {
       display: grid;
@@ -166,3 +244,14 @@ import "../styles/global.css";
     }
   }
 </style>
+
+<script>
+  window.addEventListener("scroll", function () {
+    const parallax = document.querySelector(".parallax-image");
+    let scrollPosition = window.pageYOffset;
+    parallax.style.transform =
+      "translateY(" +
+      scrollPosition * 1.2 +
+      "px)"; /* Juster hastigheden efter behov */
+  });
+</script>
