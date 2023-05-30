@@ -37,6 +37,15 @@ import "../styles/global.css";
       </div>
       <section class="container content">
         <section class="">
+          <div>
+            <a class="tilbage" href="/artister.html"
+              ><img class="default" src="img/ikoner/pil3.svg" alt="" /><img
+                class="hover"
+                src="img/ikoner/pil2.svg"
+                alt=""
+              /><p class="a">Tilbage</p></a
+            >
+          </div>
           <h1>Magnus Münster</h1>
           <div class="h2">
             <img src="/img/ikoner/citat.svg" alt="citat" /><h2>
@@ -92,6 +101,44 @@ import "../styles/global.css";
 </html>
 
 <style>
+  .tilbage {
+    display: flex;
+    flex-direction: row;
+    margin-top: 200px;
+    align-items: baseline;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color-blodappelsin);
+  }
+  .tilbage img {
+    height: 15px;
+    justify-self: center;
+    padding-top: 2px;
+  }
+  .tilbage p {
+    margin-top: 0px;
+    justify-self: center;
+    color: var(--color-blodappelsin);
+  }
+
+  .tilbage .hover {
+    display: none; /* Start med at skjule hover-billedet */
+  }
+
+  .tilbage:hover .default {
+    display: none; /* Skjul standardbilledet, når der er hover */
+  }
+
+  .tilbage:hover .hover {
+    display: inline-block; /* Vis hover-billedet, når der er hover */
+  }
+
+  .tilbage p:hover {
+    color: var(--color-hvid);
+  }
+  h1 {
+    margin-top: 10px;
+  }
   h2 {
     font-family: var(--font-family-helvetica);
     font-size: var(--font-size-link);
@@ -207,7 +254,7 @@ import "../styles/global.css";
     max-width: 100%;
     /* background-image: url("img/billeder/gradient1.png"); */
     background-size: cover;
-    transform: translateZ(1px) scale(0.5); /* Juster skaleringsfaktoren efter behov */
+    transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
   }
   .parallax-image img {
     width: 450px;
@@ -252,7 +299,7 @@ import "../styles/global.css";
     let scrollPosition = window.pageYOffset;
     parallax.style.transform =
       "translateY(" +
-      scrollPosition * 1.2 +
+      scrollPosition * 0.8 +
       "px)"; /* Juster hastigheden efter behov */
   });
 </script>

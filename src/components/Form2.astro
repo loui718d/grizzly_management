@@ -2,7 +2,7 @@
 import "../styles/global.css";
 ---
 
-<form class="contact-form">
+<form class="contact-form" role="form">
   <div class="form-group">
     <label for="email">Email:</label>
     <input
@@ -11,11 +11,21 @@ import "../styles/global.css";
       name="email"
       placeholder="Eks. Michaeljackson@mail.com"
       required
+      aria-required="true"
     />
   </div>
   <div class="form-group">
     <label for="phone">Telefon:</label>
-    <input type="tel" id="phone" name="phone" placeholder="Eks. 12 34 12 34" />
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      placeholder="Eks. 12 34 12 34"
+      aria-describedby="phone-description"
+    />
+    <div id="phone-description" class="sr-only">
+      Angiv dit telefonnummer i formatet xx xx xx xx
+    </div>
   </div>
   <div class="form-group">
     <label for="artist-name">Kunstnernavn:</label>
@@ -25,11 +35,18 @@ import "../styles/global.css";
       name="artist-name"
       placeholder="Eks. Michael Jackson"
       required
+      aria-required="true"
     />
   </div>
   <div class="form-group">
     <label for="demo">Demo:</label>
-    <input type="file" id="demo" name="demo" accept=".mp3, .wav" />
+    <input
+      type="file"
+      id="demo"
+      name="demo"
+      accept=".mp3, .wav"
+      aria-label="Upload demo"
+    />
   </div>
   <div class="form-group">
     <label for="message">Besked:</label>
@@ -38,7 +55,8 @@ import "../styles/global.css";
       name="message"
       rows="5"
       placeholder="Indtast din besked"
-      required></textarea>
+      required
+      aria-required="true"></textarea>
   </div>
   <button class="secondary_large a" type="submit">Send</button>
 </form>
@@ -102,5 +120,12 @@ import "../styles/global.css";
   }
   .form-group input[type="file"] + label {
     color: red; /* Erstat med den ønskede farve */
+  }
+
+  #phone-description {
+    font-size: 12px;
+    color: var(--color-sort-20);
+    margin-top: 5px;
+    font-family: var(--font-family-helvetica);
   }
 </style>

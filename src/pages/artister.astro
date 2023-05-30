@@ -32,47 +32,185 @@ import "../styles/global.css";
   <body>
     <Header />
 
-    <h1 class="container">Artister</h1>
-    <Card1
-      title="Ægte, råt, pop"
-      title2="Jung"
-      alt="Jung"
-      src="/img/billeder/jung4.webp"
-      href="/jung.html"
-    />
-    <Card2
-      title="Lyrisk kærlighed"
-      title2="Aksglæde"
-      alt="Aksglæde"
-      src="/img/billeder/aksglaede2.webp"
-      href="/aksglaede.html"
-    />
-    <Card1
-      title="Et barn af natten"
-      title2="Flaskedreng"
-      alt="Flaskedreng"
-      src="/img/billeder/flaskedreng4.webp"
-      href="/flaskedreng.html"
-    />
+    <div class="parallax-container">
+      <div class="filter">
+        <img src="img/billeder/Filter.webp" alt="filter" />
+      </div>
+      <div class="parallax-image">
+        <img src="img/billeder/gradient2.png" alt="gradient" />
+      </div>
+      <div class="parallax-image2">
+        <img src="img/billeder/gradient1.png" alt="gradient" />
+      </div>
+      <div class="content">
+        <h1 class="container">Artister</h1>
+        <Card1
+          title="Ægte, råt, pop"
+          title2="Jung"
+          alt="Jung"
+          src="/img/billeder/jung4.webp"
+          href="/jung.html"
+        />
+        <Card2
+          title="Lyrisk kærlighed"
+          title2="Aksglæde"
+          alt="Aksglæde"
+          src="/img/billeder/aksglaede2.webp"
+          href="/aksglaede.html"
+        />
+        <Card1
+          title="Et barn af natten"
+          title2="Flaskedreng"
+          alt="Flaskedreng"
+          src="/img/billeder/flaskedreng4.webp"
+          href="/flaskedreng.html"
+        />
 
-    <Card3
-      title="Følelsesladet og ægte"
-      title2="Magnus Münster"
-      alt="Magnus Münster"
-      src="/img/billeder/magnus3.webp"
-      href="/magnus.html"
-    />
+        <Card3
+          title="Følelsesladet og ægte"
+          title2="Magnus Münster"
+          alt="Magnus Münster"
+          src="/img/billeder/magnus3.webp"
+          href="/magnus.html"
+        />
 
-    <Card1
-      title="Eksperimenterende RNB"
-      title2="Zaina"
-      alt="Zaina"
-      src="/img/billeder/zaina4.webp"
-      href="/zaina.html"
-    />
-
+        <Card1
+          title="Eksperimenterende RNB"
+          title2="Zaina"
+          alt="Zaina"
+          src="/img/billeder/zaina4.webp"
+          href="/zaina.html"
+        />
+      </div>
+    </div>
     <Footer />
   </body>
 </html>
 
-<style></style>
+<style>
+  /* .gradient {
+    position: fixed;
+    top: 100px;
+    z-index: -998;
+    width: 500px;
+    left: 43%;
+  } */
+  .filter {
+    position: fixed;
+    height: 3000px;
+    z-index: -999;
+    opacity: 0.2;
+    filter: grayscale(100%);
+    object-fit: cover;
+  }
+
+  .filter img {
+    max-width: screen;
+    max-height: screen;
+  }
+
+  .parallax-container {
+    position: relative;
+    height: 3200px; /* Juster højden efter behov */
+    overflow: hidden;
+  }
+
+  .parallax-image {
+    position: absolute;
+    top: 100px;
+    left: 25%;
+    z-index: -99999;
+    max-width: 100%;
+    /* background-image: url("img/billeder/gradient1.png"); */
+    background-size: cover;
+    transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
+  }
+  .parallax-image img {
+    width: 600px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .parallax-image2 {
+    position: absolute;
+    top: 800px;
+    left: -25%;
+    z-index: -99999;
+    max-width: 100%;
+    /* background-image: url("img/billeder/gradient1.png"); */
+    background-size: cover;
+    transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
+  }
+  .parallax-image2 img {
+    width: 700px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 800px) {
+    /* .gradient {
+      position: fixed;
+      top: 100px;
+      z-index: -998;
+      width: 1200px;
+    } */
+    .filter {
+      position: fixed;
+      height: 100%;
+      z-index: -999;
+      opacity: 0.2;
+      filter: grayscale(100%);
+    }
+    .parallax-image {
+      width: 1200px;
+      max-width: 100%;
+      z-index: -99999;
+    }
+    .parallax-container {
+      height: 4700px;
+    }
+
+    .parallax-image img {
+      width: 1400px;
+    }
+    .parallax-image2 {
+      position: absolute;
+      top: 900px;
+      left: -25%;
+      z-index: -99999;
+      max-width: 100%;
+      /* background-image: url("img/billeder/gradient1.png"); */
+      background-size: cover;
+      transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
+    }
+    .parallax-image2 img {
+      width: 1500px;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+</style>
+<script>
+  window.addEventListener("scroll", function () {
+    const parallax = document.querySelector(".parallax-image");
+    let scrollPosition = window.pageYOffset;
+    parallax.style.transform =
+      "translateY(" +
+      scrollPosition * 0.8 +
+      "px)"; /* Juster hastigheden efter behov */
+  });
+
+  window.addEventListener("scroll", function () {
+    const parallax = document.querySelector(".parallax-image2");
+    let scrollPosition = window.pageYOffset;
+    parallax.style.transform =
+      "translateY(" +
+      scrollPosition * 0.8 +
+      "px)"; /* Juster hastigheden efter behov */
+  });
+</script>

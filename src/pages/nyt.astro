@@ -73,7 +73,7 @@ import "../styles/global.css";
 
   .parallax-container {
     position: relative;
-    height: 2000px; /* Juster højden efter behov */
+    height: 800px; /* Juster højden efter behov */
     overflow: hidden;
   }
 
@@ -85,7 +85,7 @@ import "../styles/global.css";
     max-width: 100%;
     /* background-image: url("img/billeder/gradient1.png"); */
     background-size: cover;
-    transform: translateZ(1px) scale(0.5); /* Juster skaleringsfaktoren efter behov */
+    transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
   }
   .parallax-image img {
     width: 400px;
@@ -129,6 +129,12 @@ import "../styles/global.css";
       max-width: 600px;
       margin-top: 30px;
     }
+
+    .parallax-container {
+      position: relative;
+      height: 1200px; /* Juster højden efter behov */
+      overflow: hidden;
+    }
   }
 </style>
 <script>
@@ -137,7 +143,7 @@ import "../styles/global.css";
     let scrollPosition = window.pageYOffset;
     parallax.style.transform =
       "translateY(" +
-      scrollPosition * 1.2 +
+      scrollPosition * 0.9 +
       "px)"; /* Juster hastigheden efter behov */
   });
 </script>

@@ -36,9 +36,15 @@ import "../styles/global.css";
       <div class="gradient parallax-image">
         <img src="img/billeder/gradient1.png" alt="gradient" />
       </div>
-      <section class="container content">
+      <section class="container content" aria-labelledby="contact-heading">
         <div>
           <h1>Kontakt</h1>
+          <div class="info">
+            <p><b>Kontaktinformation:</b></p>
+            <p>ryan@grizzlymanagement.dk</p>
+            <p>Nyvej 16B, st</p>
+            <p>1851 Frederiksberg C</p>
+          </div>
           <Form1 />
         </div>
       </section>
@@ -48,13 +54,16 @@ import "../styles/global.css";
 </html>
 
 <style>
-  /* .gradient {
-    position: fixed;
-    top: 100px;
-    z-index: -998;
-    width: 500px;
-    left: 43%;
-  } */
+  p {
+    margin-bottom: 10px;
+  }
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .info {
+    margin-bottom: 40px;
+  }
   .filter {
     position: fixed;
     height: 3000px;
@@ -71,7 +80,7 @@ import "../styles/global.css";
 
   .parallax-container {
     position: relative;
-    height: 1500px; /* Juster højden efter behov */
+    height: 1000px; /* Juster højden efter behov */
     overflow: hidden;
   }
 
@@ -83,7 +92,7 @@ import "../styles/global.css";
     max-width: 100%;
     /* background-image: url("img/billeder/gradient1.png"); */
     background-size: cover;
-    transform: translateZ(1px) scale(0.5); /* Juster skaleringsfaktoren efter behov */
+    transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
   }
   .parallax-image img {
     width: 450px;
@@ -111,6 +120,11 @@ import "../styles/global.css";
     .parallax-image img {
       width: 1200px;
     }
+    .parallax-container {
+      position: relative;
+      height: 1200px; /* Juster højden efter behov */
+      overflow: hidden;
+    }
   }
 </style>
 <script>
@@ -119,7 +133,7 @@ import "../styles/global.css";
     let scrollPosition = window.pageYOffset;
     parallax.style.transform =
       "translateY(" +
-      scrollPosition * 1.2 +
+      scrollPosition * 0.8 +
       "px)"; /* Juster hastigheden efter behov */
   });
 </script>

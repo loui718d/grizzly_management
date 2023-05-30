@@ -26,75 +26,151 @@ import "../styles/global.css";
       content="Grizzly Management - Repræsentation af talentfulde artister til danske musikscener. Erfarent team, der sikrer musiksucces. Læs mere om vores vejledning i musikbranchen."
     />
   </head>
+  <div id="loading-screen" role="alert" aria-busy="true">
+    <div class="background-image"></div>
+    <div class="background-image2"></div>
+    <img src="img/video/load.gif" alt="Loading animation" />
+  </div>
   <body>
     <Header />
-    <section class="hero-section">
-      <div class="video-container">
-        <video autoplay loop muted playsinline>
-          <source src="/img/video/herovid.mp4" type="video/mp4" />
-          <!-- Fallback indhold, hvis browseren ikke understøtter videoafspilning -->
-          <div class="fallback-content">
-            <p>Desværre understøtter din browser ikke videoafspilning.</p>
+    <div class="parallax-container">
+      <div class="filter">
+        <img src="img/billeder/Filter.webp" alt="filter" />
+      </div>
+      <div class="gradient parallax-image">
+        <img src="img/billeder/gradient1.png" alt="gradient" />
+      </div>
+      <div class="content2">
+        <section class="hero-section">
+          <div class="video-container">
+            <video autoplay loop muted playsinline>
+              <source src="/img/video/herovid.mp4" type="video/mp4" />
+              <!-- Fallback indhold, hvis browseren ikke understøtter videoafspilning -->
+              <div class="fallback-content">
+                <p>Desværre understøtter din browser ikke videoafspilning.</p>
+              </div>
+            </video>
+            <div class="content">
+              <h1>Grizzly Management</h1><h3>Med dig hele vejen</h3>
+            </div>
           </div>
-        </video>
-        <div class="content2">
-          <h1>Grizzly Management</h1><h3>Med dig hele vejen</h3>
-        </div>
-      </div>
-      <div id="scroll-indicator" class="scroll-indicator bounce">
-        <img src="/img/ikoner/pil.svg" alt="pil" />
-      </div>
-    </section>
+          <div id="scroll-indicator" class="scroll-indicator bounce">
+            <img src="/img/ikoner/pil.svg" alt="pil" />
+          </div>
+        </section>
 
-    <section class="container">
-      <section class="section2">
-        <div class="section2h2"><h2>Artister</h2></div>
-        <div class="tekst1">
-          <p>
-            Vi repræsenterer fem utrolige artister; Jung, Aksglæde, Flaskedreng,
-            Zeina og Magnus Mønster, som er klar til at indtage de danske
-            musikscener og blæse dig bagover med deres musik.
-          </p>
-          <br />
-          <p>
-            Vi er dedikerede til at hjælpe vores artister med at nå deres fulde
-            potentiale og sikre deres succes.Vi repræsenterer fem utrolige
-            artister; Jung, Aksglæde, Flaskedreng, Zeina og Magnus Mønster, som
-            er klar til at indtage de danske musikscener og blæse dig bagover
-            med deres musik.
-          </p>
-          <br />
-          <div>
-            <a class="primary_small" href="">Udforsk artister</a>
+        <section class="container">
+          <section class="section2">
+            <div class="section2h2"><h2>Artister</h2></div>
+            <div class="tekst1">
+              <p>
+                Vi repræsenterer fem utrolige artister; Jung, Aksglæde,
+                Flaskedreng, Zeina og Magnus Mønster, som er klar til at indtage
+                de danske musikscener og blæse dig bagover med deres musik.
+              </p>
+              <br />
+              <p>
+                Vi er dedikerede til at hjælpe vores artister med at nå deres
+                fulde potentiale og sikre deres succes.Vi repræsenterer fem
+                utrolige artister; Jung, Aksglæde, Flaskedreng, Zeina og Magnus
+                Mønster, som er klar til at indtage de danske musikscener og
+                blæse dig bagover med deres musik.
+              </p>
+              <br />
+              <div>
+                <a class="primary_small" href="/artister.html"
+                  >Udforsk artister</a
+                >
+              </div>
+            </div>
+          </section>
+          <div class="billede1">
+            <img src="/img/billeder/aksglaede1.webp" alt="Aksglæde" />
           </div>
-        </div>
-      </section>
-      <div class="billede1">
-        <img src="/img/billeder/aksglaede1.webp" alt="Aksglæde" />
+          <section class="section3">
+            <div class="tekst2">
+              <p>
+                Vores erfarne team, bestående af Ryan Bjørn Hansen og Rasmus
+                Moosdorf, har over 15 års erfaring i musikbranchen og ved, hvad
+                der skal til for at få artister ud i rampelyset og slå igennem. 
+                Vi tror på mennesker med talent og at drømme skal udleves. Med
+                den helt rette støtte og dialog, kan der leveres store
+                resultater. Hos Grizzly Management finder du en tryg og
+                professionel partner, der hjælper artister med at finde deres
+                vej i musikbranchen.
+              </p>
+              <div>
+                <a class="primary_small" href="/om_os.html">Læse mere</a>
+              </div>
+            </div>
+            <div class="section3h2"><h2>Om os</h2></div>
+          </section>
+          <div class="billede2">
+            <img src="/img/billeder/om1.webp" alt="Ryan og Rasmus" />
+          </div>
+        </section>
       </div>
-      <section class="section3">
-        <div class="tekst2">
-          <p>
-            Vores erfarne team, bestående af Ryan Bjørn Hansen og Rasmus
-            Moosdorf, har over 15 års erfaring i musikbranchen og ved, hvad der
-            skal til for at få artister ud i rampelyset og slå igennem.  Vi tror
-            på mennesker med talent og at drømme skal udleves. Med den helt
-            rette støtte og dialog, kan der leveres store resultater. Hos
-            Grizzly Management finder du en tryg og professionel partner, der
-            hjælper artister med at finde deres vej i musikbranchen.
-          </p>
-          <div><a class="primary_small" href="/om_os.html">Læse mere</a></div>
-        </div>
-        <div class="section3h2"><h2>Om os</h2></div>
-      </section>
-      <div class="billede2">
-        <img src="/img/billeder/om1.webp" alt="Ryan og Rasmus" />
-      </div>
-    </section>
+    </div>
     <Footer />
   </body>
 
   <style>
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(25, 23, 23);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999999;
+      opacity: 1;
+    }
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("img/billeder/organisk.png"); /* Erstat med stien til dit eget baggrundsbillede */
+      background-size: 120%;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 1.4; /* Juster efter ønsket gennemsigtighed */
+    }
+    .background-image2 {
+      position: absolute;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("img/billeder/organisk2.png"); /* Erstat med stien til dit eget baggrundsbillede */
+      background-size: cover;
+      background-position: center;
+      opacity: 1.4; /* Juster efter ønsket gennemsigtighed */
+    }
+
+    @keyframes slide-out {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    #loading-screen img {
+      width: 300px; /* Juster størrelsen efter behov */
+      height: auto;
+      z-index: 9999999;
+    }
+    #loading-screen.fade-out {
+      animation: slide-out 0.25s ease;
+      animation-fill-mode: forwards;
+    }
     .hero-section {
       position: relative;
       overflow: hidden;
@@ -122,7 +198,7 @@ import "../styles/global.css";
       z-index: -1;
     }
 
-    .content2 {
+    .content {
       z-index: 1;
       /* margin-right: 50px;
       margin-left: 20px; */
@@ -213,7 +289,7 @@ import "../styles/global.css";
       position: relative;
       -webkit-transform: scaleX(-1);
       transform: scaleX(-1);
-      z-index: -9999;
+      z-index: -99;
     }
     .billede1 img,
     .billede2 img {
@@ -252,13 +328,12 @@ import "../styles/global.css";
       place-self: start end;
       margin-top: 35px;
     }
-    /* gradient */
-
+    /* gradient og filter */
     .filter {
       position: fixed;
       height: 3000px;
       z-index: -999;
-      opacity: 0.5;
+      opacity: 0.2;
       filter: grayscale(100%);
       object-fit: cover;
     }
@@ -270,36 +345,37 @@ import "../styles/global.css";
 
     .parallax-container {
       position: relative;
-      height: 2000px; /* Juster højden efter behov */
+      height: 2200px; /* Juster højden efter behov */
       overflow: hidden;
     }
 
     .parallax-image {
       position: absolute;
-      top: 1000px;
+      top: 0px;
       left: 48%;
-
+      z-index: -99999;
       max-width: 100%;
       /* background-image: url("img/billeder/gradient1.png"); */
       background-size: cover;
-      transform: translateZ(1px) scale(0.5); /* Juster skaleringsfaktoren efter behov */
+      transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
     }
     .parallax-image img {
-      width: 400px;
+      width: 450px;
       -webkit-transform: scaleX(-1);
       transform: scaleX(-1);
     }
 
-    .content {
+    .content2 {
       position: relative;
       z-index: 1;
     }
-    .img img {
-      max-width: 100%;
-      margin-top: 30px;
-    }
 
     @media (min-width: 800px) {
+      #loading-screen img {
+        width: 500px; /* Juster størrelsen efter behov */
+        height: auto;
+        z-index: 9999999;
+      }
       /* .gradient {
       position: fixed;
       top: 100px;
@@ -310,20 +386,26 @@ import "../styles/global.css";
         position: fixed;
         height: 100%;
         z-index: -999;
-        opacity: 0.15;
+        opacity: 0.2;
         filter: grayscale(100%);
       }
       .parallax-image {
-        width: 1000px;
+        width: 1200px;
         max-width: 100%;
+        z-index: -99999;
       }
 
       .parallax-image img {
-        width: 1200px;
+        width: 1400px;
       }
-      .img img {
-        max-width: 600px;
-        margin-top: 30px;
+
+      .parallax-container {
+        position: relative;
+        height: 3200px; /* Juster højden efter behov */
+        overflow: hidden;
+      }
+      .billede2 img {
+        aspect-ratio: 1170/670;
       }
     }
 
@@ -468,8 +550,16 @@ import "../styles/global.css";
       let scrollPosition = window.pageYOffset;
       parallax.style.transform =
         "translateY(" +
-        scrollPosition * 1.2 +
+        scrollPosition * 0.8 +
         "px)"; /* Juster hastigheden efter behov */
+    });
+
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        var loadingScreen = document.getElementById("loading-screen");
+
+        loadingScreen.classList.add("fade-out");
+      }, 2000); // Angiv timeout-værdien i millisekunder (5 sekunder = 5000 ms)
     });
   </script>
 </html>

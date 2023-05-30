@@ -49,12 +49,11 @@ import "../styles/global.css";
               og artister på.
               <br />
               <br />
-              I Grizzly Management ser vi menneskene bag musikerne og prioriterer
-              ønsker og behov. Vi navigerer altid med succes i et musikmarked, der
-              konstant ændrer sig, og sikrer altid, at vores artister har de bedst
-              mulige betingelser. Vores mål er at skabe en ny standard for succes
-              i musikindustrien og at være en banebrydende kraft i vores artisters
-              rejse mod stjernerne.
+              Vi ser menneskene bag musikerne og prioriterer deres ønsker og behov.
+              Vi navigerer altid med succes i et musikmarked, der konstant ændrer
+              sig, og sikrer altid, at vores artister har de bedst mulige betingelser.
+              Vores mål er at skabe en ny standard for succes i musikindustrien og
+              at være en banebrydende kraft i vores artisters rejse mod stjernerne.
             </p>
             <img
               class="billede1"
@@ -189,7 +188,7 @@ import "../styles/global.css";
 
   .parallax-container {
     position: relative;
-    height: 3000px; /* Juster højden efter behov */
+    height: 2400px; /* Juster højden efter behov */
     overflow: hidden;
   }
 
@@ -201,7 +200,7 @@ import "../styles/global.css";
     max-width: 100%;
     /* background-image: url("img/billeder/gradient1.png"); */
     background-size: cover;
-    transform: translateZ(1px) scale(0.5); /* Juster skaleringsfaktoren efter behov */
+    transform: translateZ(1px); /* Juster skaleringsfaktoren efter behov */
   }
   .parallax-image img {
     width: 450px;
@@ -281,7 +280,7 @@ import "../styles/global.css";
     let scrollPosition = window.pageYOffset;
     parallax.style.transform =
       "translateY(" +
-      scrollPosition * 1.1 +
+      scrollPosition * 0.9 +
       "px)"; /* Juster hastigheden efter behov */
   });
 </script>

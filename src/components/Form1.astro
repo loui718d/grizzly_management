@@ -2,7 +2,7 @@
 import "../styles/global.css";
 ---
 
-<form class="contact-form">
+<form class="contact-form" role="form">
   <div class="form-group">
     <label for="email">Din email:</label>
     <input
@@ -11,6 +11,7 @@ import "../styles/global.css";
       name="email"
       placeholder="Eks. Michaeljackson@mail.com"
       required
+      aria-required="true"
     />
   </div>
   <div class="form-group">
@@ -25,6 +26,7 @@ import "../styles/global.css";
       name="subject"
       placeholder="Eks. potientielt samarbejde"
       required
+      aria-required="true"
     />
   </div>
   <div class="form-group">
@@ -34,7 +36,8 @@ import "../styles/global.css";
       name="message"
       rows="5"
       placeholder="Indtast din besked"
-      required></textarea>
+      required
+      aria-required="true"></textarea>
   </div>
   <button class="secondary_large a" type="submit">Send</button>
 </form>
