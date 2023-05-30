@@ -29,7 +29,7 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
-    <div class="parallax-container">
+    <div class="parallax-container" role="main" aria-label="Parallax container">
       <div class="filter">
         <img src="img/billeder/Filter.webp" alt="filter" />
       </div>
@@ -94,7 +94,9 @@ import "../styles/global.css";
             frameborder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"></iframe>
+            loading="lazy"
+            aria-label="Jung Spotify Player"
+            aria-describedby="spotify-description"></iframe>
         </section>
       </section>
     </div>

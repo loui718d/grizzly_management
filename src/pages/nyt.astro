@@ -28,7 +28,11 @@ import "../styles/global.css";
   </head>
   <body>
     <Header />
-    <div class="parallax-container">
+    <div
+      class="parallax-container"
+      role="region"
+      aria-label="Parallax-container"
+    >
       <div class="filter">
         <img src="img/billeder/Filter.webp" alt="filter" />
       </div>
@@ -40,7 +44,7 @@ import "../styles/global.css";
           Følg med i hvad der sker med vores artister og meget mere på vores
           instagram
         </p>
-        <div class="img">
+        <div class="img" role="img" aria-label="Instagram">
           <img src="img/billeder/screen_insta.png" alt="IG" />
         </div>
       </div>
