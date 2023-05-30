@@ -555,23 +555,12 @@ import "../styles/global.css";
     });
 
     window.addEventListener("load", function () {
-      var hasShownLoadingScreen = localStorage.getItem("hasShownLoadingScreen");
-
-      if (!hasShownLoadingScreen) {
+      setTimeout(function () {
         var loadingScreen = document.getElementById("loading-screen");
+
         loadingScreen.classList.add("fade-out");
-
-        localStorage.setItem("hasShownLoadingScreen", true);
-
-        setTimeout(function () {
-          loadingScreen.style.display = "none";
-        }, 2000); // Angiv timeout-værdien i millisekunder (f.eks. 2000 ms = 2 sekunder)
-      } else {
-        var loadingScreen = document.getElementById("loading-screen");
-        loadingScreen.style.display = "none";
-      }
+      }, 2000); // Angiv timeout-værdien i millisekunder (5 sekunder = 5000 ms)
     });
   </script>
-
 
 </html>
